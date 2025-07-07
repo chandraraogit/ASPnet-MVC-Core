@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+    // This is standred view
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product</title>
+</head>
+<body>
+    @{
+        // ProductViewModel productVM = ViewData["Prod"] as ProductViewModel;
+        ProductViewModel productVM = ViewBag.Prod;
+    }
+    <h4>This is product Page</h4>
+    <p>Prod ID : @productVM.ProdID</p>
+    <p>Prod Code : @productVM.ProdCode</p>
+    <p>Prod Name : @productVM.ProductName</p>
+    <p> Prod Price : @productVM.ProductPrice</p>
+
+</body>
+</html>
