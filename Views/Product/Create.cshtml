@@ -32,7 +32,7 @@
     @* // with help of HTML helper design a form  stand HTML helper
         2. can create strongly type HTML helper as well by adding @model ProductViewModel;  
     *@
-    @using (Html.BeginForm("SaveProduct","Product",FormMethod.Post))
+   @*  @using (Html.BeginForm("SaveProduct","Product",FormMethod.Post))
     {
         <div>
             @Html.LabelFor(x=>x.ProdID,"Prod ID")
@@ -55,6 +55,28 @@
         </div>
         <br />
         <input type="submit" value="AddProduct" />
+    } *@
+
+    @* strongler type helper example *@
+    @using(Html.BeginForm("SaveProduct","Product",FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(d=>d.ProdCode)
+            @Html.TextBoxFor(d=>d.ProdCode)
+        </div>
+        <div>
+            @Html.LabelFor(d=>d.ProdID)
+            @Html.TextBoxFor(a=>a.ProdID)
+        </div>
+        <div>
+            @Html.LabelFor(x=>x.ProductName)
+            @Html.TextBoxFor(x=>x.ProductName)
+        </div>
+        <div>
+            @Html.LabelFor(p=>p.ProductPrice)
+            @Html.TextBoxFor(p=>p.ProductPrice)
+        </div>
+        <input type="submit" value="Add Product" />
     }
 </body>
 </html>
