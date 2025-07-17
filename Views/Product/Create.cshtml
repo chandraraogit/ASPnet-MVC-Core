@@ -63,7 +63,7 @@
     @* strongler type helper example *@
     <div class="row">
         <div class="col-lg-6 col-sm-9">
-            @using (Html.BeginForm("SaveProduct", "Product", FormMethod.Post))
+           @*  @using (Html.BeginForm("SaveProduct", "Product", FormMethod.Post))
             {
                 <div>
                     @Html.LabelFor(d => d.ProdCode)
@@ -82,9 +82,20 @@
                     @Html.TextBoxFor(p => p.ProductPrice, "", new { @class = "form-control" })
                 </div>
                 <input type="submit" value="Add Product" class="btn btn-success" />
-            }
+            } *@
+            @Html.EditorForModel();
         </div>
     </div>
+   @* 
+   Template Helper 
+   ----------------
+   No need to create any html code , it will generate code based on the model design
    
+   
+   Tag helper 
+    ------------------
+
+
+   *@
 </body>
 </html>
